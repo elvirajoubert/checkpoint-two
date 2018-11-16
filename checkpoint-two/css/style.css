@@ -1,0 +1,273 @@
+/* CSS Variables */
+* {
+    --primary: rgb(173, 173, 159);
+    --dark:rgb(247, 236, 236);
+    --light:white;
+    --shadow: 0 2px 5px rgba(190, 201, 98, 0.8); 
+}
+
+ html {
+    box-sizing: border-box;
+    color: var(--dark); 
+} 
+
+body {
+    background: rgb(114, 114, 109);
+    margin: 30px 50px;
+    line-height: 1.4;
+    font-family: 'Life Savers', cursive;
+}
+
+header {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+}
+
+.btn {
+    background: rgb(77, 71, 71);
+    color: white;
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+    border: 0;
+    border-radius: 40px;
+    float: left;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+}
+
+/* Navigation */
+.main-nav ul {
+    display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.main-nav a {
+    background: rgb(255, 223, 0);
+    display: block;
+    text-decoration: none;
+    padding: 0.5em;
+    text-align: center;
+    color: rgb(15, 14, 14);
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 7px;
+    /* box-shadow: var(--shadow); */
+}
+
+.main-nav a:hover {
+    background: #EEE8AA;
+    /* color: var(--light); */
+}
+
+/* Top Container */
+.top-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+        'showcase showcase top-box-a'
+        'showcase showcase top-box-b';
+}
+
+/* Showcase */
+.showcase {
+    grid-area: showcase;
+    min-height: 400px;
+    /* background-size:image; */
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+    box-shadow: 0 1px 2px 2px rgb(190, 201, 98, 0);
+
+
+    
+}
+/* div.img {
+    box-shadow: 0 1px 3px 13px;
+    border-radius: 0 5px 5px 5px rgb(56, 49, 49); */
+}
+
+
+.showcase h1 {
+    color: rgb(235, 220, 220);
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+
+.showcase p {
+    font-size: 1.3rem;
+    margin-top: 0;
+    float: left;
+    
+}
+
+/* Top Box */
+.top-box {
+    background: none;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 1.5rem;
+}
+
+.top-box .price {
+    font-size: 2.5rem;
+}
+
+.top-box-a {
+    grid-area: top-box-a;
+    background-color: rgb(173, 173, 159);
+}
+
+.top-box-b {
+    grid-area: top-box-b;
+    background-color: rgb(173, 173, 159);
+}
+
+/* Boxes */
+.boxes {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.box {
+    background: grey;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    display: block;
+ 
+
+}
+
+/* Info */
+
+.info {
+ background: var(--primary);
+box-shadow: var(--shadow);
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem;
+}
+
+/* Portfolio */
+h3 {
+    display: block;
+    color:rgb(243, 226, 226);
+    line-height: 1;
+    text-align: center;
+    margin: 0px 0 0;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.portfolio {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+}
+
+.portfolio img {
+    width: 80%;
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    box-shadow: 0 2px 3px 10px;
+
+}
+.portfolio p {
+    text-align: center;
+}
+
+#feeback {
+    display: block;
+    list-style: none;
+}
+
+#feeback p a {
+    text-decoration: none;
+
+}
+
+/* Footer */
+footer {
+    /* margin-top: 2rem; */
+    background: var(--dark);
+    color: black;
+    text-align: center;
+    padding: 1rem;
+}
+
+.media {
+    display: inline;
+    flex-direction: row;
+    justify-items: center;
+    /* top: 20%;
+    left: 50%; */
+    transform: translate(-53%, -50%);
+
+
+}
+
+.media li {
+    list-style: none;
+    margin: 5px 20px;
+    display: inline-block;
+    font-size: 20px;
+    padding: 5px 5px;
+    transition: .5s;
+}
+
+.media li:hover {
+    color: #292929;
+    transition: .2s;
+}
+
+/* Media Queries */
+@media (max-width: 700px) {
+    .top-container {
+        grid-template-areas:
+            'showcase showcase'
+            'top-box-a top-box-b';
+    }
+
+    .showcase h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-nav ul {
+        grid-template-columns: 1fr;
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+    }
+
+    .info .btn {
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+}
+/* Small Screens */
+
+@media (max-width: 500px) {
+    .top-container {
+        grid-template-areas:
+            'showcase'
+            'top-box-a'
+            'top-box-b';
+    }
+}
