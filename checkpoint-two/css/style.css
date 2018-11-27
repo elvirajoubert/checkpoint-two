@@ -1,15 +1,15 @@
 /* CSS Variables */
 * {
     --primary: rgb(173, 173, 159);
-    --dark:rgb(247, 236, 236);
-    --light:white;
-    --shadow: 0 2px 5px rgba(190, 201, 98, 0.8); 
+    --dark: rgb(247, 236, 236);
+    --light: white;
+    --shadow: 0 2px 5px rgba(190, 201, 98, 0.8);
 }
 
- html {
+html {
     box-sizing: border-box;
-    color: var(--dark); 
-} 
+    color: var(--dark);
+}
 
 body {
     background: rgb(114, 114, 109);
@@ -88,16 +88,17 @@ img {
     padding: 3rem;
     display: flex;
     flex-direction: column;
-   justify-content: center;
+    justify-content: center;
     box-shadow: 0 1px 2px 2px rgb(190, 201, 98, 0);
 
 
-    
+
 }
+
 /* div.img {
     box-shadow: 0 1px 3px 13px;
     border-radius: 0 5px 5px 5px rgb(56, 49, 49); */
-}
+
 
 
 .showcase h1 {
@@ -110,7 +111,7 @@ img {
     font-size: 1.3rem;
     margin-top: 0;
     float: left;
-    
+
 }
 
 /* Top Box */
@@ -148,15 +149,15 @@ img {
     text-align: center;
     padding: 1.5rem 2rem;
     display: block;
- 
+
 
 }
 
 /* Info */
 
 .info {
- background: var(--primary);
-box-shadow: var(--shadow);
+    background: var(--primary);
+    box-shadow: var(--shadow);
     display: grid;
     grid-gap: 30px;
     grid-template-columns: repeat(2, 1fr);
@@ -166,7 +167,7 @@ box-shadow: var(--shadow);
 /* Portfolio */
 h3 {
     display: block;
-    color:rgb(243, 226, 226);
+    color: rgb(243, 226, 226);
     line-height: 1;
     text-align: center;
     margin: 0px 0 0;
@@ -187,6 +188,7 @@ h3 {
     box-shadow: 0 2px 3px 10px;
 
 }
+
 .portfolio p {
     text-align: center;
 }
@@ -261,6 +263,7 @@ footer {
         margin: auto;
     }
 }
+
 /* Small Screens */
 
 @media (max-width: 500px) {
